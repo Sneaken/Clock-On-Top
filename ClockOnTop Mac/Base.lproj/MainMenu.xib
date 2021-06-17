@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -581,15 +582,10 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
                         <items>
+                            <menuItem title="Duplicate" keyEquivalent="d" id="Nya-wM-ljn" userLabel="Duplicate"/>
                             <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
                                 <connections>
                                     <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Zoom" id="R4o-n2-Eq4">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="performZoom:" target="-1" id="DIl-cC-cCs"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
@@ -617,8 +613,8 @@
             </items>
             <point key="canvasLocation" x="200" y="121"/>
         </menu>
-        <window title="Clock On Top" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="utilityWindow" titlebarAppearsTransparent="YES" toolbarStyle="compact" id="QvC-M9-y7g" customClass="ClockPanel" customModule="Clock_On_Top" customModuleProvider="target">
-            <windowStyleMask key="styleMask" titled="YES" utility="YES" nonactivatingPanel="YES" HUD="YES"/>
+        <window title="Clock On Top" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="utilityWindow" titlebarAppearsTransparent="YES" toolbarStyle="compact" titleVisibility="hidden" id="QvC-M9-y7g" customClass="ClockPanel" customModule="Clock_On_Top" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" utility="YES" nonactivatingPanel="YES" HUD="YES" fullSizeContentView="YES"/>
             <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1593" y="1031" width="179" height="52"/>
@@ -628,9 +624,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-ON-of4">
-                        <rect key="frame" x="-2" y="0.0" width="183" height="52"/>
+                        <rect key="frame" x="0.0" y="0.0" width="179" height="52"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" placeholderString="12:34:56" id="0bJ-uo-AZj">
+                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="0bJ-uo-AZj">
                             <font key="font" metaFont="system" size="40"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -643,7 +639,7 @@
             <connections>
                 <outlet property="timeLabel" destination="Vuc-ON-of4" id="NdL-cG-wA7"/>
             </connections>
-            <point key="canvasLocation" x="369.5" y="269"/>
+            <point key="canvasLocation" x="199.5" y="14"/>
         </window>
     </objects>
 </document>
