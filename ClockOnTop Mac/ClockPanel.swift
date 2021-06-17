@@ -16,7 +16,7 @@ class ClockPanel: NSPanel {
 		super.init(contentRect: contentRect, styleMask: style, backing: backingStoreType, defer: flag)
 
 		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = "HH:mm:ss"
+		dateFormatter.dateFormat = "hh:mm:ss"
 
 		refreshTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: {_ in
 
