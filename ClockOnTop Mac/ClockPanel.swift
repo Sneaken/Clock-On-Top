@@ -38,7 +38,7 @@ class ClockWindow: NSPanel {
 		let widthSize = max(self.frame.width * 0.23, 8)
 		let newFontSize = min(heightSize, widthSize)
 
-		if abs(newFontSize - fontSize) < 2 {
+		if abs(newFontSize - fontSize) < 1 {
 			return
 		}
 		fontSize = newFontSize
