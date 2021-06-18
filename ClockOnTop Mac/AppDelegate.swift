@@ -10,7 +10,7 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	@IBOutlet var window: ClockPanel!
+	@IBOutlet var window: ClockWindow!
 
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {

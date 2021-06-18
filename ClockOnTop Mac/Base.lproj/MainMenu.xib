@@ -613,33 +613,36 @@
             </items>
             <point key="canvasLocation" x="200" y="121"/>
         </menu>
-        <window title="Clock On Top" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="utilityWindow" titlebarAppearsTransparent="YES" toolbarStyle="compact" titleVisibility="hidden" id="QvC-M9-y7g" customClass="ClockPanel" customModule="Clock_On_Top" customModuleProvider="target">
-            <windowStyleMask key="styleMask" titled="YES" utility="YES" nonactivatingPanel="YES" HUD="YES" fullSizeContentView="YES"/>
+        <window title="Clock On Top" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="utilityWindow" titlebarAppearsTransparent="YES" toolbarStyle="compact" titleVisibility="hidden" id="QvC-M9-y7g" customClass="ClockWindow" customModule="Clock_On_Top" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" resizable="YES" utility="YES" nonactivatingPanel="YES" HUD="YES" fullSizeContentView="YES"/>
             <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1593" y="1031" width="179" height="52"/>
+            <rect key="contentRect" x="1593" y="1031" width="190" height="42"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1792" height="1120"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="179" height="52"/>
+                <rect key="frame" x="0.0" y="0.0" width="190" height="42"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-ON-of4">
-                        <rect key="frame" x="0.0" y="0.0" width="179" height="52"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="0bJ-uo-AZj">
-                            <font key="font" metaFont="system" size="40"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-ON-of4">
+                        <rect key="frame" x="17" y="0.0" width="156" height="43"/>
+                        <textFieldCell key="cell" controlSize="large" alignment="center" title="88:88:88" usesSingleLineMode="YES" id="0bJ-uo-AZj">
+                            <font key="font" size="36" name=".SFNS-Regular"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <accessibility description="time"/>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Vuc-ON-of4" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="8iS-nv-T0C"/>
+                    <constraint firstItem="Vuc-ON-of4" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="Ffr-bb-Diu"/>
+                </constraints>
             </view>
             <accessibility description="clock"/>
             <connections>
                 <outlet property="timeLabel" destination="Vuc-ON-of4" id="NdL-cG-wA7"/>
             </connections>
-            <point key="canvasLocation" x="199.5" y="14"/>
+            <point key="canvasLocation" x="205" y="9"/>
         </window>
     </objects>
 </document>
