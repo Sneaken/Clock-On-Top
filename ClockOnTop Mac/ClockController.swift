@@ -53,6 +53,11 @@ class ClockController: NSViewController {
         })
     }
 
+    override func rightMouseUp(with event: NSEvent) {
+        let menu = MainMenu()
+        NSMenu.popUpContextMenu(menu, with:event, for: view)
+    }
+
     @objc
     func onResized() {
         let heightSize = max(view.frame.height * 0.75, 8)

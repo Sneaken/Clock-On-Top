@@ -11,6 +11,7 @@
 		E112AC7C28558C5C000AB7D9 /* ClockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112AC7B28558C5C000AB7D9 /* ClockController.swift */; };
 		E1402EC228568FC500F83FB5 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1402EC128568FC500F83FB5 /* AppMenu.swift */; };
 		E1402EC62856940100F83FB5 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = E1402EC52856940100F83FB5 /* Credits.html */; };
+		E1402EC82856979800F83FB5 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1402EC72856979800F83FB5 /* MainMenu.swift */; };
 		E143DADC267BC6E50076CABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143DADB267BC6E50076CABA /* AppDelegate.swift */; };
 		E143DADE267BC6E60076CABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E143DADD267BC6E60076CABA /* Assets.xcassets */; };
 		E143DAEA267BC88F0076CABA /* ClockPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143DAE9267BC88F0076CABA /* ClockPanel.swift */; };
@@ -21,6 +22,7 @@
 		E112AC7B28558C5C000AB7D9 /* ClockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockController.swift; sourceTree = "<group>"; };
 		E1402EC128568FC500F83FB5 /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
 		E1402EC52856940100F83FB5 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		E1402EC72856979800F83FB5 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		E143DAD8267BC6E50076CABA /* Clock On Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock On Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E143DADB267BC6E50076CABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E143DADD267BC6E60076CABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				E143DAE9267BC88F0076CABA /* ClockPanel.swift */,
 				E112AC7B28558C5C000AB7D9 /* ClockController.swift */,
 				E1402EC128568FC500F83FB5 /* AppMenu.swift */,
+				E1402EC72856979800F83FB5 /* MainMenu.swift */,
 			);
 			path = "ClockOnTop Mac";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E143DADC267BC6E50076CABA /* AppDelegate.swift in Sources */,
+				E1402EC82856979800F83FB5 /* MainMenu.swift in Sources */,
 				E143DAEA267BC88F0076CABA /* ClockPanel.swift in Sources */,
 				E112AC7C28558C5C000AB7D9 /* ClockController.swift in Sources */,
 				E1402EC228568FC500F83FB5 /* AppMenu.swift in Sources */,

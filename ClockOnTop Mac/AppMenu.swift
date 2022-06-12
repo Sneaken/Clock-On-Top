@@ -13,12 +13,7 @@ class AppMenu: NSMenu {
     override init(title: String) {
         super.init(title: title)
         let main = NSMenuItem()
-        main.submenu = NSMenu(title: "MainMenu")
-        main.submenu?.items = [
-            NSMenuItem(title: "About \(appName)", action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: ""),
-            NSMenuItem.separator(),
-            NSMenuItem(title: "Quit \(appName)", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"),
-        ]
+        main.submenu = MainMenu(title:"MainMenu")
         items = [main]
     }
 
