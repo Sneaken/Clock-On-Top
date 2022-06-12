@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E112AC7A28555143000AB7D9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112AC7928555143000AB7D9 /* main.swift */; };
+		E112AC7C28558C5C000AB7D9 /* ClockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112AC7B28558C5C000AB7D9 /* ClockController.swift */; };
 		E143DADC267BC6E50076CABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143DADB267BC6E50076CABA /* AppDelegate.swift */; };
 		E143DADE267BC6E60076CABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E143DADD267BC6E60076CABA /* Assets.xcassets */; };
-		E143DAE1267BC6E60076CABA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E143DADF267BC6E60076CABA /* MainMenu.xib */; };
 		E143DAEA267BC88F0076CABA /* ClockPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143DAE9267BC88F0076CABA /* ClockPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E112AC7928555143000AB7D9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E112AC7B28558C5C000AB7D9 /* ClockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockController.swift; sourceTree = "<group>"; };
 		E143DAD8267BC6E50076CABA /* Clock On Top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clock On Top.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E143DADB267BC6E50076CABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E143DADD267BC6E60076CABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E143DAE0267BC6E60076CABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E143DAE2267BC6E60076CABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E143DAE3267BC6E60076CABA /* Clock_On_Top.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Clock_On_Top.entitlements; sourceTree = "<group>"; };
 		E143DAE9267BC88F0076CABA /* ClockPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockPanel.swift; sourceTree = "<group>"; };
@@ -54,11 +56,12 @@
 			isa = PBXGroup;
 			children = (
 				E143DADB267BC6E50076CABA /* AppDelegate.swift */,
+				E112AC7928555143000AB7D9 /* main.swift */,
 				E143DADD267BC6E60076CABA /* Assets.xcassets */,
-				E143DADF267BC6E60076CABA /* MainMenu.xib */,
 				E143DAE2267BC6E60076CABA /* Info.plist */,
 				E143DAE3267BC6E60076CABA /* Clock_On_Top.entitlements */,
 				E143DAE9267BC88F0076CABA /* ClockPanel.swift */,
+				E112AC7B28558C5C000AB7D9 /* ClockController.swift */,
 			);
 			path = "ClockOnTop Mac";
 			sourceTree = "<group>";
@@ -121,7 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E143DADE267BC6E60076CABA /* Assets.xcassets in Resources */,
-				E143DAE1267BC6E60076CABA /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,21 +136,12 @@
 			files = (
 				E143DADC267BC6E50076CABA /* AppDelegate.swift in Sources */,
 				E143DAEA267BC88F0076CABA /* ClockPanel.swift in Sources */,
+				E112AC7C28558C5C000AB7D9 /* ClockController.swift in Sources */,
+				E112AC7A28555143000AB7D9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E143DADF267BC6E60076CABA /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E143DAE0267BC6E60076CABA /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E143DAE4267BC6E60076CABA /* Debug */ = {
@@ -275,7 +268,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.3;
+				CURRENT_PROJECT_VERSION = 0.4;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "ClockOnTop Mac/Info.plist";
@@ -284,7 +277,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smilingrob.Clock-On-Top";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -301,7 +294,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.3;
+				CURRENT_PROJECT_VERSION = 0.4;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "ClockOnTop Mac/Info.plist";
@@ -310,7 +303,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smilingrob.Clock-On-Top";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
