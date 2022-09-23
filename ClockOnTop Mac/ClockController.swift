@@ -5,13 +5,13 @@
 //  Created by Robert Wallis on 6/11/2022.
 //
 
-import Foundation
 import Cocoa
+import Foundation
 
 class ClockController: NSViewController {
-    let timeLabel = NSTextField(frame: NSRect(x: 0, y: 0, width: 140, height: 70))
+    let timeLabel = NSTextField(frame: NSRect(x: 0, y: 0, width: 140, height: 35))
     var refreshTimer: Timer?
-    var fontSize: CGFloat = 36.0
+    var fontSize: CGFloat = 35
 
     override func loadView() {
         view = NSView()
@@ -25,19 +25,16 @@ class ClockController: NSViewController {
             assert(true, "no superview")
             return
         }
+
+        timeLabel.font = NSFont(name: "Raanana", size: 35)
         timeLabel.alignment = .center
         timeLabel.backgroundColor = NSColor.clear
         timeLabel.drawsBackground = false
         timeLabel.isBezeled = false
-        timeLabel.isAutomaticTextCompletionEnabled = false
-        timeLabel.allowsCharacterPickerTouchBarItem = false
         timeLabel.autoresizesSubviews = true
-        timeLabel.usesSingleLineMode = true
+        timeLabel.usesSingleLineMode = false
         timeLabel.isEditable = false
         timeLabel.isSelectable = false
-        if #available(macOS 11.0, *) {
-            timeLabel.controlSize = .large
-        }
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         timeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         timeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -45,7 +42,7 @@ class ClockController: NSViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(onResized), name: NSWindow.didResizeNotification, object: nil)
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm:ss"
+        dateFormatter.dateFormat = "HH:mm:ss"
 
         refreshTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { _ in
             let time = dateFormatter.string(from: Date())
@@ -55,13 +52,13 @@ class ClockController: NSViewController {
 
     override func rightMouseUp(with event: NSEvent) {
         let menu = MainMenu()
-        NSMenu.popUpContextMenu(menu, with:event, for: view)
+        NSMenu.popUpContextMenu(menu, with: event, for: view)
     }
 
     @objc
     func onResized() {
         let heightSize = max(view.frame.height * 0.75, 8)
-        let widthSize = max(view.frame.width * 0.23, 8)
+        let widthSize = max(view.frame.width * 0.2, 8)
         let newFontSize = min(heightSize, widthSize)
 
         if abs(newFontSize - fontSize) < 1 {
@@ -69,8 +66,7 @@ class ClockController: NSViewController {
         }
         fontSize = newFontSize
 
-        let newFont = NSFont.systemFont(ofSize: newFontSize)
+        let newFont = NSFont(name: "Raanana", size: newFontSize)
         timeLabel.font = newFont
     }
-
 }

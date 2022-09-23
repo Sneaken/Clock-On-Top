@@ -17,8 +17,8 @@ class ClockPanel: NSPanel {
             toolbarStyle = .unifiedCompact
         }
         isRestorable = true
-        level = .floating
-        collectionBehavior = [.canJoinAllSpaces, .stationary]
-        minSize = NSSize(width: 84, height: 12)
+        level = .mainMenu
+        collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+        minSize = NSSize(width: 180, height: 50)
     }
 }
