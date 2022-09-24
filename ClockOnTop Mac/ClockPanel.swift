@@ -21,4 +21,5 @@ class ClockPanel: NSPanel {
         collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         minSize = NSSize(width: 180, height: 50)
     }
+
 }

@@ -28,5 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(self)
         window.setFrameUsingName("clockWindow", force: false)
         window.orderFrontRegardless()
+//        NSEvent.addLocalMonitorForEvents(matching: .mouseMoved, handler: { event -> NSEvent? in
+//            print(event)
+        ////            NSCursor.crosshair.set()
+//            return event
+//        })
     }
 }
