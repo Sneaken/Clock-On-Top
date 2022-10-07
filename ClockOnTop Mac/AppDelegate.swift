@@ -8,8 +8,10 @@
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var window: ClockPanel!
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let window = ClockPanel(
+        window = ClockPanel(
             contentRect: NSRect(x: 0, y: 0, width: 150, height: 40),
             styleMask: [
                 .borderless,
@@ -28,10 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(self)
         window.setFrameUsingName("clockWindow", force: false)
         window.orderFrontRegardless()
-//        NSEvent.addLocalMonitorForEvents(matching: .mouseMoved, handler: { event -> NSEvent? in
-//            print(event)
-        ////            NSCursor.crosshair.set()
-//            return event
-//        })
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        window.saveFrame(usingName: "clockWindow")
     }
 }
